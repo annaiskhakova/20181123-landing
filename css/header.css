@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'tablets'.
-        on line 26 of /Users/Anna/Google Диск/20181106-landing/css/header.scss, in `tablets'
-        from line 26 of /Users/Anna/Google Диск/20181106-landing/css/header.scss
+        on line 26 of /Users/anna/Google Диск/20181123-landing/css/header.scss, in `tablets'
+        from line 26 of /Users/anna/Google Диск/20181123-landing/css/header.scss
 
 21: flex-flow: row;
 22: align-self:center;
@@ -16,8 +16,8 @@ Error: Undefined mixin 'tablets'.
 31:         }
 
 Backtrace:
-/Users/Anna/Google Диск/20181106-landing/css/header.scss:26:in `tablets'
-/Users/Anna/Google Диск/20181106-landing/css/header.scss:26
+/Users/anna/Google Диск/20181123-landing/css/header.scss:26:in `tablets'
+/Users/anna/Google Диск/20181123-landing/css/header.scss:26
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 26 of /Users/Anna/Google Диск/20181106-landing/css/header.scss, in `tablets'\A         from line 26 of /Users/Anna/Google Диск/20181106-landing/css/header.scss\A \A 21: flex-flow: row;\A 22: align-self:center;\A 23: height: rem(90px);\A 24: margin: 0 auto;\A 25: width: rem(960px); \A 26:     @include tablets {\A 27:     // width: 96%; \A 28:     }\A 29:     @include phones {\A 30:         width: 100%; \A 31:         }"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 26 of /Users/anna/Google Диск/20181123-landing/css/header.scss, in `tablets'\A         from line 26 of /Users/anna/Google Диск/20181123-landing/css/header.scss\A \A 21: flex-flow: row;\A 22: align-self:center;\A 23: height: rem(90px);\A 24: margin: 0 auto;\A 25: width: rem(960px); \A 26:     @include tablets {\A 27:     // width: 96%; \A 28:     }\A 29:     @include phones {\A 30:         width: 100%; \A 31:         }"; }
