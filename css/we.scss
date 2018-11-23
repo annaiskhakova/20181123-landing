@@ -1,0 +1,96 @@
+.we {
+background-color: #ffffff;
+background-image: url("./../img/bg-we.jpg");
+display: flex;
+text-align: center;
+width:100%;
+color:black;
+text-align: center;
+font-family: 'Ubuntu';
+font-size: rem(14px); 
+line-height: 1.7;
+h3{
+  margin:  rem(40px) 0 rem(20px) 0;
+  color:black;
+  text-align: center;
+  font-family: 'Lifehack-Medium';
+  font-size: rem(22px); 
+  @include tablets {
+    margin:  rem(15px) 0;
+  }
+  @include phones {
+    text-align: left;
+    width:100%;
+    margin:  rem(15px) 0;
+  }
+}
+}
+
+.we__container {
+margin: 0 auto;
+width: rem(960px); 
+justify-content: center;
+align-self: center;
+@include tablets {
+  width: 96%; 
+  margin-top:23%;
+  align-self: flex-start;
+}
+@include phones {
+  margin-top:14%;
+}
+}
+
+.we__h1 h1{
+margin: rem(10px) 0 rem(20px) 0;
+color:black;
+text-align: center;
+@include phones {
+  font-size: rem(50px); 
+  margin-bottom: 0;
+}
+}
+
+.we__content {
+display: flex;
+flex-direction: row;
+padding:rem(20px);
+justify-items: center;
+align-content: space-around;
+@include tablets {
+  padding:rem(10px) 0;
+}
+@include phones {
+  flex-direction: column;
+  padding:rem(20px);
+}
+}
+
+
+
+.we__benefits{
+  flex:1;
+  @include phones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.we-benef__text{
+  @include phones {
+text-align:left;
+  width:75%;  
+  align-self: flex-end;
+  margin-bottom:rem(14px);
+  }
+}
+.we-benef__svg{
+  @include phones {
+  width:30%;  
+  align-self: center;
+  justify-self: flex-start;
+  padding: 0;
+  }
+}

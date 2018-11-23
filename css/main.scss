@@ -1,0 +1,31 @@
+//colors
+$orange: #e45028;
+$yellow: #f9b43b;
+$black: #2f3234;
+$red: #e35028;
+
+
+//breakpoints
+
+$tablets:768px;
+$phones:480px;
+
+
+@import "./normalize.css";
+@import "../fonts/fonts.css";
+@import "./media";
+@import "./layout";
+
+
+
+
+@import "./header";
+@import "./we";
+@import "./team";
+@import "./menu";
+@import "./reviews";
+@import "./slider";
+@import "./form";
+@import "./contacts";
+
+

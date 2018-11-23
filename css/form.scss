@@ -1,0 +1,267 @@
+.form{
+width:100%;
+background-color: #000000;
+background-image: url("./../img/bg-form.jpg");
+background-position: 50%;
+display: flex;
+align-content: center;
+flex-flow: column;
+justify-content: center;
+@include tablets {
+    justify-content: flex-start;
+    padding-top:13%;
+       }
+}
+
+
+.form__container
+{
+    margin: 0 auto;
+    max-width: 60rem;
+    margin-top:rem(-57px);
+    @include tablets {
+        // padding:0 20%;
+        width: 96%;
+        margin-top:0;
+           }
+}
+
+
+.form__header{
+display: flex;
+align-content: center;
+justify-content: center;
+margin-bottom: rem(10px);
+text-align:center;
+@include phones {
+
+  h1{
+      font-size: rem(48px);
+      margin: 0 20%;
+    }
+}
+
+}
+
+
+.form__content{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    flex-wrap: wrap;
+
+}
+
+
+.form__item{
+    display: flex;
+width:50%;
+justify-content: stretch;
+flex-direction: column;
+@include tablets {
+    width:100%;
+    padding:0 17%;
+ }
+ @include phones {
+    width:100%;
+    padding:0;
+  
+ }
+}
+
+
+
+
+
+.form__row
+{
+display:flex;
+flex-direction: row;
+width:100%; 
+margin:rem(7px) rem(12px);
+@include tablets {
+margin:rem(11px) rem(12px) rem(5px) rem(12px);
+@include phones {
+    margin:rem(10px) rem(12px) rem(5px) rem(12px);
+    }
+}
+}
+
+.form__row-input
+{
+display:flex;
+flex-direction: row;
+width:100%; 
+margin:rem(7px) rem(12px) rem(12px) rem(12px);
+@include tablets {
+    margin-top:rem(8px);
+    justify-content: center;
+    }
+    @include phones {
+        
+        margin-top:rem(25px);
+             }
+}
+
+.form__row-button
+{
+display:flex;
+flex-direction: row;
+width:100%; 
+margin:0;
+@include tablets {
+    margin-top:rem(25px);
+    }
+    @include phones {
+justify-content: center;
+margin-top:rem(25px);
+     }
+}
+
+.form__block-title {
+color: #fff;
+text-align: left;
+font-family: 'Ubuntu';
+font-size: rem(14px); 
+line-height: 1.8;
+}
+
+.form__input {
+border-radius: rem(5px);
+border: rem(3px) solid #ffffff;
+padding: rem(6px) rem(0px);
+width: 100%;
+outline:none;
+display: flex;
+vertical-align: top;
+}
+
+.form__input:focus{
+border: rem(3px) solid $yellow;
+outline:none;
+outline-offset: 0;
+}
+
+.form__input-comment{
+height:rem(91px);
+}
+
+
+.form__block {
+flex: 1;
+margin-right: rem(20px);
+
+&:last-child {
+    margin-right: 0;
+}
+}
+
+
+.form__radio{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: rem(20px);
+    cursor: pointer;
+    font-size: rem(22px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.form-radio__cont{
+    margin-right: rem(10px); 
+    background-color: aqua; 
+    display:flex;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.form-radio__check{
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+  margin-right: rem(10px); 
+}
+.form-radio__check:after{
+    content: '';
+    display: block;
+    width: rem(7px);
+    height: rem(7px);
+    background-color:$red;
+    border-radius: 60%;
+    opacity: 0;
+    position: absolute;
+    top:rem(4px);
+    left: rem(4px);
+}
+
+input[type="radio"]:checked + .form-radio__check:after{
+    opacity: 1;
+}
+
+
+.form-radio__check-checkbox{
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: #fff;
+    border-radius: rem(2px);
+    position: relative;
+  margin-right: rem(10px); 
+}
+.form-radio__check-checkbox:after{
+    content: '';
+    display: block;
+    width: rem(5px);
+    height: rem(7px);
+    border-right: rem(3px) solid $red;
+    border-bottom: rem(3px) solid $red;
+    background-color:#ffffff;
+    transform: rotate( 45deg);
+    opacity: 0;
+    position: absolute;
+    top:rem(1px);
+    left: rem(3px);
+}
+
+
+
+
+input[type="checkbox"]:checked + .form-radio__check-checkbox:after{
+    opacity: 1;
+}
+
+.form__btn {
+    display:flex;
+    background-color: $orange;
+ align-self: flex-start;
+ justify-self: start;
+    margin:  0 rem(12px); 
+    font-weight:500;
+}
+
+.form__btn-del{
+    display: block;
+text-transform: uppercase;
+font-family: 'Ubuntu';
+font-weight:300;
+font-size: rem(13px);
+line-height: 1.4;
+padding:rem(8px) rem(15px);
+color:#ffffff;
+border-radius: rem(5px);
+text-decoration: none;
+width:auto;
+align-self: flex-start;
+}
