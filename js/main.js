@@ -261,14 +261,15 @@ const revOverlay = revBlock.nextElementSibling;
 /// wheel
 
 $(function () {
-    point = $('points__li'),
+   
     console.log('мяу');
 
 
         var moveSection = function (slideNum){
-         
+         var
         //    $this = $(this),
-        
+            // doc = $('#doc'),
+            
             section = $('section'),
             activeSection = section.filter('.active'),
             reqSection = section.eq(slideNum), 
@@ -276,7 +277,7 @@ $(function () {
             list = $('#wheel'),
             duration = 800;
 
-            console.log(point);
+            console.log('мяумяу');
 
 
             
@@ -288,32 +289,34 @@ $(function () {
                     reqSection.addClass('active');
                 });
             }
-
+        }
  
 
-        $('.header-wheel__down').on('click', function(e){
+        $('.pointzero').on('click', function(e){
             e.preventDefault();
             
-            console.log(point);
+            var $this = $(this),
+            point = $('.pointzero'),
             section = $('section'),
             activeSection = section.filter('.active'),
             nextSection = activeSection.next(),
             prevSection = activeSection.prev();
             
-            moveSection(nextSection.index(3));
+            // moveSection(nextSection.index());
             
-            // if (point.hasClass('header-wheel__down')) {
-              
-            // }
-            // else { );
-            // }
+            if ($this.hasClass('header-wheel__down')) { 
+                    moveSection(prevSection.index());
+            }
+            else { 
+                moveSection(nextSection.index());
+            }
        
       
            
         });
 
 
-    }
+    // }
 
        
 });

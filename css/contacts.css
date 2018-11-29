@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'phones'.
-        on line 16 of /Users/anna/Google Диск/20181123-landing/css/contacts.scss, in `phones'
-        from line 16 of /Users/anna/Google Диск/20181123-landing/css/contacts.scss
+        on line 16 of /Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss, in `phones'
+        from line 16 of /Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss
 
 11: .cont-footer{
 12: display: flex;
@@ -16,8 +16,8 @@ Error: Undefined mixin 'phones'.
 21: .cont-footer__left{
 
 Backtrace:
-/Users/anna/Google Диск/20181123-landing/css/contacts.scss:16:in `phones'
-/Users/anna/Google Диск/20181123-landing/css/contacts.scss:16
+/Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss:16:in `phones'
+/Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss:16
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'phones'.\A         on line 16 of /Users/anna/Google Диск/20181123-landing/css/contacts.scss, in `phones'\A         from line 16 of /Users/anna/Google Диск/20181123-landing/css/contacts.scss\A \A 11: .cont-footer{\A 12: display: flex;\A 13: flex-flow:row;\A 14: align-content: space-around;\A 15: background-color: #000000;\A 16: @include phones {\A 17:     flex-flow:column;\A 18: }\A 19: }\A 20: \A 21: .cont-footer__left{"; }
+  content: "Error: Undefined mixin 'phones'.\A         on line 16 of /Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss, in `phones'\A         from line 16 of /Users/Anna/Documents/GitHub/20181123-landing/css/contacts.scss\A \A 11: .cont-footer{\A 12: display: flex;\A 13: flex-flow:row;\A 14: align-content: space-around;\A 15: background-color: #000000;\A 16: @include phones {\A 17:     flex-flow:column;\A 18: }\A 19: }\A 20: \A 21: .cont-footer__left{"; }
