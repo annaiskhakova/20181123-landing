@@ -59,7 +59,7 @@ padding:rem(15px) 0 rem(10px);
 }
 
 .team-acco__item
-{
+{  flex-flow: column;
 margin:rem(23px) 0;   
 @include tablets {
   flex-flow: column;
@@ -107,14 +107,23 @@ border-top-width: rem(0px);
 .team-acco__content{
 display:flex;
 flex-flow: row;
-padding: rem(10px) rem(15px);
 overflow: hidden;
+transition: 0.3s;
 @include tablets {
   flex-flow: column;
-
-  display:flex;
   }
+height:0;
 }
+
+
+.team-acco__content-active{
+  height:rem(120px);
+  padding: rem(10px) rem(15px);
+  @include tablets {
+    height:rem(195px);
+  }
+  }
+
 
 .team-acco__pic{
 padding:0;

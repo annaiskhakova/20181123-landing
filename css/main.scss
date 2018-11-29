@@ -17,8 +17,11 @@ $phones:480px;
 @import "./layout";
 
 
+//slick
+@import "../js/slick/slick.css";
+@import "../js/slick/slick-theme.css";
 
-
+//sections
 @import "./header";
 @import "./we";
 @import "./team";
@@ -27,5 +30,6 @@ $phones:480px;
 @import "./slider";
 @import "./form";
 @import "./contacts";
+
 
 

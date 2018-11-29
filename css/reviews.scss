@@ -71,9 +71,9 @@ align-self: flex-start;
 }
 
 .review-cont__text    {
-    @include phones {
-      display:none;
-    }   
+    @include tablets {
+      display: none;
+    } 
 }
 
 .reviews__btn:hover{
@@ -81,10 +81,80 @@ background-color: #1f2122;
 }
 
 
-// @each $revphoto in (01, 02, 03, 04, 05, 06, 07, 08)
-// {.reviews__block--#{$revphoto}
-// {
-// background-image: url("./../img/revphoto-#{$revphoto}.jpg");  
-// background-size: cover;  
-// }
-// }
+
+/// модалочка пошла
+
+.reviews__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0005;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+   transition: 1s;
+
+  }
+
+  .reviews__overlay-active {
+    display: flex;
+  }
+  
+  .reviews__container {
+    position: relative;
+    border-radius: 5px;
+    padding:20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: rem(14px);
+    line-height: 1.7;
+    font-weight: 300;
+    color: #000000;
+    font-family: 'Ubuntu';
+    transition: ease-out 0.3s;
+    max-width:35%;
+    @include tablets{
+     max-width:60%;
+    }
+    @include phones{
+     max-width:85%;
+    }
+  }
+  
+  .reviews__content {
+    width: 200px;
+text-align: center;
+    padding: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+    margin: 0;
+
+  }
+  .reviews__h6 {
+      display:flex;
+      font-family: 'Gagalin';
+      text-align: left;
+      font-size: rem(14px);
+      margin-block-start: 0;
+      margin-block-end: rem(20px);
+      align-self: flex-start;
+  }
+
+
+.reviews__close {
+    position: absolute;
+    color: #fff;
+    display: flex;
+    align-self: flex-end;
+    top:rem(20px);
+    right:rem(20px);
+
+
+  }
+  

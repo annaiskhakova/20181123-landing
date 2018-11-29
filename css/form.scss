@@ -265,3 +265,75 @@ text-decoration: none;
 width:auto;
 align-self: flex-start;
 }
+
+
+.error
+{ 
+    color:red;
+    font-size: rem(14px);
+    // position: absolute;
+    margin-top: 10px;
+}
+
+  
+
+/// модалочка пошла
+
+.response__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #0005;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+   transition: 1s;
+  }
+
+  .response__overlay-active {
+    display: flex;
+  }
+  
+  .response__container {
+    position: relative;
+    border-radius: 5px;
+    padding:10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .response__content {
+    width: 200px;
+text-align: center;
+    padding: 20px;
+    color: grey;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+
+
+.response__close {
+    margin: auto rem(10px);
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    max-width:90px;
+   transition: ease-out 0.3s;
+
+  }
+  
