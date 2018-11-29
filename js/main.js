@@ -277,8 +277,7 @@ $(function () {
             list = $('#wheel'),
             duration = 800;
 
-            console.log('мяумяу');
-
+           
 
             
         if (reqSection.length) {
@@ -296,7 +295,7 @@ $(function () {
             e.preventDefault();
             
             var $this = $(this),
-            point = $('.pointzero'),
+            // point = $('.pointzero'),
             section = $('section'),
             activeSection = section.filter('.active'),
             nextSection = activeSection.next(),
@@ -305,14 +304,25 @@ $(function () {
             // moveSection(nextSection.index());
             
             if ($this.hasClass('header-wheel__down')) { 
+                if(prevSection.length)  { 
                     moveSection(prevSection.index());
+                }  else {
+                    moveSection(section.last().index());
+
+                } 
+                
             }
             else { 
-                moveSection(nextSection.index());
+                if(nextSection.length)  { 
+                    moveSection(nextSection.index());
+                }  else {
+                    moveSection(section.first().index());
+                } 
+                
             }
        
       
-           
+       
         });
 
 

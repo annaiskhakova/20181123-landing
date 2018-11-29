@@ -151,8 +151,14 @@ display: flex;
 .points__li a {
   top: 0;
   display: fixed;
+//   background: url('./../img/point.svg') no-repeat;
   -ms-flex-item-align: center;
-      align-self: center;
+//   display:flex;
+//       align-self: center;
+//       align-items: center;
+//       align-content: center;
+//       justify-content:center;
+
   width: 0.4375rem;
   height: 0.4375rem;
   width: 100%;
