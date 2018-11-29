@@ -174,19 +174,20 @@ sendButton.addEventListener('click', event => {
     xhr.responseType = 'json';
       xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
       xhr.send(JSON.stringify(sendmail));
-      console.log(sendmail);
+  
       xhr.addEventListener('load', () => {
-        const template = document.querySelector("#overlayTemplate");
+        const template1 = document.querySelector("#overlayTemplate");
         // const overlayElement = fragment.querySelector(".response__overlay");
         // const contentElement = fragment.querySelector(".response__content");
         // const closeElement = fragment.querySelector(".response__close");
-
-        template.classList.add('response__overlay-active');
-
+        console.log( template1);
+        console.log(sendmail);
+        template1.classList.add('response__overlay-active');
+      
         const closeResponse = document.querySelector(".response__close");
 
         closeResponse.addEventListener('click', function() {
-           template.classList.remove('response__overlay-active');
+           template1.classList.remove('response__overlay-active');
         });
 
 

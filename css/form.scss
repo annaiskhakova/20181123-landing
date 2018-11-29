@@ -311,7 +311,7 @@ align-self: flex-start;
   .response__content {
     width: 200px;
 text-align: center;
-    padding: 20px;
+    padding: rem(10px);
     color: grey;
     font-family: 'Ubuntu';
     font-weight: 300;
@@ -322,15 +322,13 @@ text-align: center;
 
 
 .response__close {
-    margin: auto rem(10px);
+    margin: rem(20px) auto 0 auto ;
     color: #fff;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
     display: flex;
-    align-self: center;
-    justify-self: center;
-    align-items: center;
+
     justify-content: center;
     max-width:90px;
    transition: ease-out 0.3s;
