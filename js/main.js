@@ -251,3 +251,109 @@ const revOverlay = revBlock.nextElementSibling;
 });
 
 }
+
+
+
+
+
+
+
+/// wheel
+
+$(function () {
+    point = $('points__li'),
+    console.log('мяу');
+
+
+        var moveSection = function (slideNum){
+         
+        //    $this = $(this),
+        
+            section = $('section'),
+            activeSection = section.filter('.active'),
+            reqSection = section.eq(slideNum), 
+            reqIndex = reqSection.index(),
+            list = $('#wheel'),
+            duration = 800;
+
+            console.log(point);
+
+
+            
+        if (reqSection.length) {
+                list.animate({  
+                    'top' : -reqIndex * 100 + 'vh'
+                    }, duration, function( ) {
+                    activeSection.removeClass('active');
+                    reqSection.addClass('active');
+                });
+            }
+
+ 
+
+        $('.header-wheel__down').on('click', function(e){
+            e.preventDefault();
+            
+            console.log(point);
+            section = $('section'),
+            activeSection = section.filter('.active'),
+            nextSection = activeSection.next(),
+            prevSection = activeSection.prev();
+            
+            moveSection(nextSection.index(3));
+            
+            // if (point.hasClass('header-wheel__down')) {
+              
+            // }
+            // else { );
+            // }
+       
+      
+           
+        });
+
+
+    }
+
+       
+});
+
+
+
+
+
+
+
+// /// wheel
+
+// $(function () {
+
+
+    
+//     $('.header-wheel__down').on('click', function(e){
+//     e.preventDefault();
+    
+//     point = $('.points__li'),
+//     section = $('section'),
+//     activeSection = section.filter('.active'),
+//     reqSection = activeSection.next(), 
+//     reqIndex = reqSection.index(),
+//     list = $('#wheel'),
+//     duration = 800;
+    
+    
+//     if (reqSection.length) {
+    
+//     list.animate({  
+//     'top' : -reqIndex * 100 + 'vh'
+//     }, duration, function( ) {
+//     activeSection.removeClass('active');
+//     reqSection.addClass('active');
+//     });
+//     }
+//     });
+    
+    
+    
+    
+//     });

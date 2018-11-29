@@ -8,9 +8,12 @@ body {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
   padding: 0;
-  position: relative;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow: hidden; }
 
 h1,
 h2,
@@ -23,8 +26,8 @@ h5 {
 .wrapper {
   padding: 0;
   margin: 0;
+  top: 0;
   width: 100%;
-  align-self: stretch;
   position: relative;
   display: flex;
   flex-direction: column; }
@@ -159,9 +162,6 @@ h2 {
   width: 0.4375rem;
   height: 0.4375rem; }
 
-.active {
-  display: flex; }
-
 button {
   border: 0;
   background-color: initial;
@@ -178,7 +178,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  align-self: center;
+  align-self: flex-start;
   width: 100%;
   position: absolute; }
 
@@ -204,7 +204,7 @@ button {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  z-index: 100;
+  z-index: 99;
   width: 60rem; }
   @media (max-width: 768px) {
     .logo {
