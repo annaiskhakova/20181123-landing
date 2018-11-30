@@ -138,6 +138,25 @@ for (let i = 0; i < OpenSlaiderBTN.length; i++ ) {
 }
 
 
+//map
+ymaps.ready(function () {
+var myMap = new ymaps.Map('map', {
+            center: [55.751574, 37.573856],
+            controls: ['zoomControl'],
+            zoom: 9
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        clusterer = new ymaps.Clusterer({
+            preset: 'islands#invertedNightClusterIcons',
+            clusterHideIconOnBalloonOpen: false,
+            geoObjectHideIconOnBalloonOpen: false
+        });
+
+});
+
+
+
 
 
 /// Слайдер 

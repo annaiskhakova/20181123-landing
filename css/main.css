@@ -1362,8 +1362,6 @@ input[type="checkbox"]:checked + .form-radio__check-checkbox:after {
 
 .contacts {
   background-color: #000000;
-  background-image: url("./../img/bg-contacts.jpg");
-  background-position: 50%;
   display: flex;
   align-content: flex-end;
   flex-flow: column;
@@ -1374,7 +1372,8 @@ input[type="checkbox"]:checked + .form-radio__check-checkbox:after {
   display: flex;
   flex-flow: row;
   align-content: space-around;
-  background-color: #000000; }
+  background-color: #000000;
+  z-index: 1; }
   @media (max-width: 480px) {
     .cont-footer {
       flex-flow: column; } }
@@ -1463,5 +1462,10 @@ input[type="checkbox"]:checked + .form-radio__check-checkbox:after {
 
 .cont-footer__icon:hover {
   fill: #ffffff; }
+
+.map {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=main.css.map */
