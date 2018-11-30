@@ -143,16 +143,20 @@ display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-//   margin: 0.875rem  0.3125rem;
-//   width: 0.4375rem;
-//   height: 0.4375rem;
-  top: 0; }
+          border-radius: 50%; 
+          padding: 0.15rem;
+          margin: 0.15rem;
+          border: 0.0625rem solid rgba(225, 225, 225, 0.0);
+  top: 0;
+ }
 
 
     .point__circle{
   top: 0;
   display: fixed;
-  background: url('./../img/point.svg') no-repeat center;
+//   background: url('./../img/point.svg') no-repeat center;
+background-color:#ffffff;
+
   -ms-flex-item-align: center;
 //   display:flex;
 //       align-self: center;
@@ -163,18 +167,19 @@ display: flex;
   width: 0.4375rem;
   height: 0.4375rem;
   margin: 0.3125rem;
-  padding: 0.3125rem;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 0.625rem; 
-  border: 0.0625rem solid rgba(225, 225, 225, 0.0);
+  border-radius: 50%; 
+  border: 0.0625rem solid rgba(225, 225, 225, 0.5);
 }
 
 
-.point__circle:hover {
-  border: 0.0625rem solid #ffffff; }
-
+.points__li:hover {
+ 
+    border: 0.0625rem solid rgba(225, 225, 225, 0.5);
+}
 // .points__img {
 //   display: -webkit-box;
 //   display: -ms-flexbox;
@@ -184,6 +189,11 @@ display: flex;
 //   width: 0.4375rem;
 //   height: 0.4375rem; }
 
+
+.points__active{
+ background-color: rgba(225, 225, 225, 0.2);  
+ border: 0.0625rem solid #ffffff; 
+}
 
 
 button{

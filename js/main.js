@@ -70,22 +70,21 @@ function createAccordMenu(element) {
     const menuTarget = element.querySelectorAll (".menu-acco__visible");
     let activeContent;
     let activeHead;
-
+    
     for (let i = 0; i < menuTarget.length; i++ ) {
         const menuHead = menuTarget[i];
 
        menuHead.addEventListener ('click', function() {
-        activeContent = menuHead.nextElementSibling;
+       
 
-        if (activeContent.classList == 'menu-acco__text menu-acco__text-active') {
+        if (activeContent) {
             activeContent.classList.remove('menu-acco__text-active');
             activeContent.textContent = '';  
             }      
-             else
-          {
-       activeContent.classList.add('menu-acco__text-active');
+            activeContent = menuHead.nextElementSibling;    
+        activeContent.classList.add('menu-acco__text-active');
         activeContent.textContent = 'Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему.';
-        }
+     
 
         if(activeHead) {
             activeHead.classList.remove('menu-acco__visible-active');
@@ -95,11 +94,11 @@ function createAccordMenu(element) {
       
         });
      
-        menuHead.addEventListener("mouseout", function() {
-                    activeHead.classList.remove('menu-acco__visible-active');  
-                    activeContent.classList.remove('menu-acco__text-active');
-                    activeContent.textContent = '';  
-                    });
+        // menuHead.addEventListener("mouseout", function() {
+        //             activeHead.classList.remove('menu-acco__visible-active');  
+        //             activeContent.classList.remove('menu-acco__text-active');
+        //             activeContent.textContent = '';  
+        //             });
 }
 }
 
@@ -253,206 +252,91 @@ const revOverlay = revBlock.nextElementSibling;
 }
 
 
-
-
-
-
-
-// /// wheel <3
-
-// $(function () {
-   
-//     console.log('мяу');
-
-
-//         var moveSection = function (slideNum){
-//          var
-        
-        
-            
-//             section = $('section'),
-//             activeSection = section.filter('.active'),
-//             reqSection = section.eq(slideNum), 
-//             reqIndex = reqSection.index(),
-//             list = $('#wheel'),
-//             duration = 800;
-
-           
-
-            
-//         if (reqSection.length) {
-//                 list.animate({  
-//                     'top' : -reqIndex * 100 + 'vh'
-//                     }, duration, function( ) {
-//                     activeSection.removeClass('active');
-//                     reqSection.addClass('active');
-//                 });
-//             }
-//         }
- 
-
-//         $('.pointzero').on('click', function(e){
-//             e.preventDefault();
-            
-//             var $this = $(this),
-//             // point = $('.pointzero'),
-//             section = $('section'),
-//             activeSection = section.filter('.active'),
-//             nextSection = activeSection.next(),
-//             prevSection = activeSection.prev();
-            
-//             // moveSection(nextSection.index());
-            
-//             if ($this.hasClass('header-wheel__down')) { 
-//                 if(prevSection.length)  { 
-//                     moveSection(prevSection.index());
-//                 }  else {
-//                     moveSection(section.last().index());
-
-//                 } 
-                
-//             }
-//             else { 
-//                 if(nextSection.length)  { 
-//                     moveSection(nextSection.index());
-//                 }  else {
-//                     moveSection(section.first().index());
-//                 } 
-                
-//             }
-       
-      
-       
-//         });
-
-
-       
-// });
-
-
-
-
-
-
-
-// /// wheel min
-
-// $(function () {
-
-
-    
-//     $('.header-wheel__down').on('click', function(e){
-//     e.preventDefault();
-    
-//     point = $('.points__li'),
-//     section = $('section'),
-//     activeSection = section.filter('.active'),
-//     reqSection = activeSection.next(), 
-//     reqIndex = reqSection.index(),
-//     list = $('#wheel'),
-//     duration = 800;
-    
-    
-//     if (reqSection.length) {
-    
-//     list.animate({  
-//     'top' : -reqIndex * 100 + 'vh'
-//     }, duration, function( ) {
-//     activeSection.removeClass('active');
-//     reqSection.addClass('active');
-//     });
-//     }
-//     });
-    
-    
-    
-    
-//     });
-
-
-
 /// wheel mouse
+$(function() {
 
-$(function () {
-   
-        var generatePoints = function () {
+    var colorPoints = function (index) {
+        $('#doc')
+        .find('.points__li')
+        .eq(index)
+        .addClass('points__active')
+        .siblings()
+        .removeClass('points__active');
+    }
+
+    var generatePoints = function() {
         $('section').each(function() {
-        var point = $('<li>', {
-        attr : { 
-        class : 'points__li'
-        },
-        html: '<div class="point__circle"></div>'
+            var point = $('<li>', {
+                attr: {
+                    class: 'points__li'
+                },
+                html: '<div class="point__circle"></div>'
+            })
+            $('.points__ul').append(point);
         })
-        $('.points__ul').append(point);
-        })
-        };
-        generatePoints();
+    };
+    generatePoints();
 
 
 
 
-        var moveSection = function (slideNum){
-         var
-        
-        
-            
+    var moveSection = function(slideNum) {
+        var
+
             section = $('section'),
             activeSection = section.filter('.active'),
-            reqSection = section.eq(slideNum), 
+            reqSection = section.eq(slideNum),
             reqIndex = reqSection.index(),
             list = $('#wheel'),
             duration = 800;
 
-           
 
-            
+
+
         if (reqSection.length) {
-                list.animate({  
-                    'top' : -reqIndex * 100 + 'vh'
-                    }, duration, function( ) {
-                    activeSection.removeClass('active');
-                    reqSection.addClass('active');
-                });
-            }
+            list.animate({
+                'top': -reqIndex * 100 + 'vh'
+            }, duration, function() {
+                activeSection.removeClass('active');
+                reqSection.addClass('active');
+            });
         }
- 
+    }
 
-        $('.pointzero').on('click', function(e){
-            e.preventDefault();
-            
-            var $this = $(this),
+
+    $('.pointzero').on('click', function(e) {
+        e.preventDefault();
+
+        var $this = $(this),
             section = $('section'),
             activeSection = section.filter('.active'),
-            // nextSection = activeSection.next(),
-            // prevSection = activeSection.prev(),
             existedSection,
             edgeSection,
             reqSection;
-            
-                       
-            if ($this.hasClass('header-wheel__down')) { 
-               existedSection = activeSection.prev();
-               edgeSection = section.last();
-            }
-
-            if ($this.hasClass('header-wheel__up')) { 
-                existedSection = activeSection.next();
-                edgeSection = section.first();
-            }
-
-            reqSection = existedSection.length ? existedSection.index() : edgeSection.index()
-
-            moveSection(reqSection);
-           });
-
-$('body').on('click', '.points__li', function(i) {
-    var $this = $(this),
-    index = $this.index();
-
-moveSection(index);
 
 
-})
-       
+        if ($this.hasClass('header-wheel__down')) {
+            existedSection = activeSection.prev();
+            edgeSection = section.last();
+        }
+
+        if ($this.hasClass('header-wheel__up')) {
+            existedSection = activeSection.next();
+            edgeSection = section.first();
+        }
+
+        reqSection = existedSection.length ? existedSection.index() : edgeSection.index()
+
+        moveSection(reqSection);
+    });
+
+    $('body').on('click', '.points__li', function(i) {
+        var $this = $(this),
+            index = $this.index();
+
+        moveSection(index);
+        colorPoints(index);
+
+    })
+
 });
-
