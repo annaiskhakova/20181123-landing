@@ -132,7 +132,7 @@ h2 {
   justify-content: space-evenly;
   top: 0; }
 
-.points__li a {
+.point__circle {
   top: 0;
   display: fixed;
   background: url("./../img/point.svg") no-repeat center;
@@ -147,7 +147,7 @@ h2 {
   border-radius: 0.625rem;
   border: 0.0625rem solid rgba(225, 225, 225, 0); }
 
-.points__li a:hover {
+.point__circle:hover {
   border: 0.0625rem solid #ffffff; }
 
 button {

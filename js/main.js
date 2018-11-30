@@ -381,7 +381,7 @@ $(function () {
         attr : { 
         class : 'points__li'
         },
-        html: '<a href="#"></a>'
+        html: '<div class="point__circle"></div>'
         })
         $('.points__ul').append(point);
         })
@@ -421,17 +421,15 @@ $(function () {
             e.preventDefault();
             
             var $this = $(this),
-            // point = $('.pointzero'),
             section = $('section'),
             activeSection = section.filter('.active'),
-            nextSection = activeSection.next(),
-            prevSection = activeSection.prev(),
+            // nextSection = activeSection.next(),
+            // prevSection = activeSection.prev(),
             existedSection,
             edgeSection,
             reqSection;
             
-            // moveSection(nextSection.index());
-            
+                       
             if ($this.hasClass('header-wheel__down')) { 
                existedSection = activeSection.prev();
                edgeSection = section.last();
@@ -442,17 +440,19 @@ $(function () {
                 edgeSection = section.first();
             }
 
+            reqSection = existedSection.length ? existedSection.index() : edgeSection.index()
 
-            reqItem = 
+            moveSection(reqSection);
+           });
 
-            if (existedSection.length){
-            moveSection(existedSection.index());
-            } else {
-             moveSection(edgeSection.index());
-            }
-       
-        });
+$('body').on('click', '.points__li', function(i) {
+    var $this = $(this),
+    index = $this.index();
+
+moveSection(index);
 
 
+})
        
 });
+

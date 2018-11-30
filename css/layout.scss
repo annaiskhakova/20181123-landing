@@ -148,7 +148,8 @@ display: flex;
 //   height: 0.4375rem;
   top: 0; }
 
-.points__li a {
+
+    .point__circle{
   top: 0;
   display: fixed;
   background: url('./../img/point.svg') no-repeat center;
@@ -167,9 +168,11 @@ display: flex;
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 0.625rem; 
-  border: 0.0625rem solid rgba(225, 225, 225, 0.0);}
+  border: 0.0625rem solid rgba(225, 225, 225, 0.0);
+}
 
-.points__li a:hover {
+
+.point__circle:hover {
   border: 0.0625rem solid #ffffff; }
 
 // .points__img {
