@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'tablets'.
-        on line 15 of /Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss, in `tablets'
-        from line 15 of /Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss
+        on line 15 of /Users/anna/Google Диск/20181123-landing/css/slider.scss, in `tablets'
+        from line 15 of /Users/anna/Google Диск/20181123-landing/css/slider.scss
 
 10: 
 11: .slider__h1{
@@ -16,8 +16,8 @@ Error: Undefined mixin 'tablets'.
 20: .slider__container{
 
 Backtrace:
-/Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss:15:in `tablets'
-/Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss:15
+/Users/anna/Google Диск/20181123-landing/css/slider.scss:15:in `tablets'
+/Users/anna/Google Диск/20181123-landing/css/slider.scss:15
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 15 of /Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss, in `tablets'\A         from line 15 of /Users/Anna/Documents/GitHub/20181123-landing/css/slider.scss\A \A 10: \A 11: .slider__h1{\A 12:    color:white; \A 13:    line-height:0.9;\A 14:    margin-left: -0.5rem;\A 15:    @include tablets {\A 16:        text-align: center;\A 17:    }\A 18: }\A 19: \A 20: .slider__container{"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 15 of /Users/anna/Google Диск/20181123-landing/css/slider.scss, in `tablets'\A         from line 15 of /Users/anna/Google Диск/20181123-landing/css/slider.scss\A \A 10: \A 11: .slider__h1{\A 12:    color:white; \A 13:    line-height:0.9;\A 14:    margin-left: -0.5rem;\A 15:    @include tablets {\A 16:        text-align: center;\A 17:    }\A 18: }\A 19: \A 20: .slider__container{"; }

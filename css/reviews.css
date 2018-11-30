@@ -1,7 +1,7 @@
 /*
 Error: Undefined mixin 'tablets'.
-        on line 21 of /Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss, in `tablets'
-        from line 21 of /Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss
+        on line 21 of /Users/anna/Google Диск/20181123-landing/css/reviews.scss, in `tablets'
+        from line 21 of /Users/anna/Google Диск/20181123-landing/css/reviews.scss
 
 16: width:25%;
 17: height:50%;
@@ -16,8 +16,8 @@ Error: Undefined mixin 'tablets'.
 26: }
 
 Backtrace:
-/Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss:21:in `tablets'
-/Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss:21
+/Users/anna/Google Диск/20181123-landing/css/reviews.scss:21:in `tablets'
+/Users/anna/Google Диск/20181123-landing/css/reviews.scss:21
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -66,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'tablets'.\A         on line 21 of /Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss, in `tablets'\A         from line 21 of /Users/Anna/Documents/GitHub/20181123-landing/css/reviews.scss\A \A 16: width:25%;\A 17: height:50%;\A 18: background-size: cover;\A 19: background-position: no-repeat;\A 20: filter: grayscale(100%);\A 21: @include tablets {\A 22:     width:50%;\A 23:     height:25%;\A 24:     text-align: center;\A 25:     }\A 26: }"; }
+  content: "Error: Undefined mixin 'tablets'.\A         on line 21 of /Users/anna/Google Диск/20181123-landing/css/reviews.scss, in `tablets'\A         from line 21 of /Users/anna/Google Диск/20181123-landing/css/reviews.scss\A \A 16: width:25%;\A 17: height:50%;\A 18: background-size: cover;\A 19: background-position: no-repeat;\A 20: filter: grayscale(100%);\A 21: @include tablets {\A 22:     width:50%;\A 23:     height:25%;\A 24:     text-align: center;\A 25:     }\A 26: }"; }

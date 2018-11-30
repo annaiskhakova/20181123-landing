@@ -1,6 +1,6 @@
 /*
 Error: Undefined variable: "$yellow".
-        on line 50 of /Users/Anna/Documents/GitHub/20181123-landing/css/layout.scss
+        on line 50 of /Users/anna/Google Диск/20181123-landing/css/layout.scss
 
 45: font-family: 'Gagalin';
 46: font-size: 4.5rem;
@@ -15,7 +15,7 @@ Error: Undefined variable: "$yellow".
 55: 
 
 Backtrace:
-/Users/Anna/Documents/GitHub/20181123-landing/css/layout.scss:50
+/Users/anna/Google Диск/20181123-landing/css/layout.scss:50
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$yellow\".\A         on line 50 of /Users/Anna/Documents/GitHub/20181123-landing/css/layout.scss\A \A 45: font-family: 'Gagalin';\A 46: font-size: 4.5rem;\A 47: margin: 1.875rem 0 1.25rem 0.625rem;\A 48: line-break: auto;\A 49: text-transform: uppercase;\A 50: color: $yellow;\A 51: @include phones {\A 52: font-size: 4rem;\A 53: }\A 54: }\A 55: "; }
+  content: "Error: Undefined variable: \"$yellow\".\A         on line 50 of /Users/anna/Google Диск/20181123-landing/css/layout.scss\A \A 45: font-family: 'Gagalin';\A 46: font-size: 4.5rem;\A 47: margin: 1.875rem 0 1.25rem 0.625rem;\A 48: line-break: auto;\A 49: text-transform: uppercase;\A 50: color: $yellow;\A 51: @include phones {\A 52: font-size: 4rem;\A 53: }\A 54: }\A 55: "; }

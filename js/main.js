@@ -258,78 +258,76 @@ const revOverlay = revBlock.nextElementSibling;
 
 
 
-/// wheel
+// /// wheel <3
 
-$(function () {
+// $(function () {
    
-    console.log('мяу');
+//     console.log('мяу');
 
 
-        var moveSection = function (slideNum){
-         var
-        //    $this = $(this),
-            // doc = $('#doc'),
+//         var moveSection = function (slideNum){
+//          var
+        
+        
             
-            section = $('section'),
-            activeSection = section.filter('.active'),
-            reqSection = section.eq(slideNum), 
-            reqIndex = reqSection.index(),
-            list = $('#wheel'),
-            duration = 800;
+//             section = $('section'),
+//             activeSection = section.filter('.active'),
+//             reqSection = section.eq(slideNum), 
+//             reqIndex = reqSection.index(),
+//             list = $('#wheel'),
+//             duration = 800;
 
            
 
             
-        if (reqSection.length) {
-                list.animate({  
-                    'top' : -reqIndex * 100 + 'vh'
-                    }, duration, function( ) {
-                    activeSection.removeClass('active');
-                    reqSection.addClass('active');
-                });
-            }
-        }
+//         if (reqSection.length) {
+//                 list.animate({  
+//                     'top' : -reqIndex * 100 + 'vh'
+//                     }, duration, function( ) {
+//                     activeSection.removeClass('active');
+//                     reqSection.addClass('active');
+//                 });
+//             }
+//         }
  
 
-        $('.pointzero').on('click', function(e){
-            e.preventDefault();
+//         $('.pointzero').on('click', function(e){
+//             e.preventDefault();
             
-            var $this = $(this),
-            // point = $('.pointzero'),
-            section = $('section'),
-            activeSection = section.filter('.active'),
-            nextSection = activeSection.next(),
-            prevSection = activeSection.prev();
+//             var $this = $(this),
+//             // point = $('.pointzero'),
+//             section = $('section'),
+//             activeSection = section.filter('.active'),
+//             nextSection = activeSection.next(),
+//             prevSection = activeSection.prev();
             
-            // moveSection(nextSection.index());
+//             // moveSection(nextSection.index());
             
-            if ($this.hasClass('header-wheel__down')) { 
-                if(prevSection.length)  { 
-                    moveSection(prevSection.index());
-                }  else {
-                    moveSection(section.last().index());
+//             if ($this.hasClass('header-wheel__down')) { 
+//                 if(prevSection.length)  { 
+//                     moveSection(prevSection.index());
+//                 }  else {
+//                     moveSection(section.last().index());
 
-                } 
+//                 } 
                 
-            }
-            else { 
-                if(nextSection.length)  { 
-                    moveSection(nextSection.index());
-                }  else {
-                    moveSection(section.first().index());
-                } 
+//             }
+//             else { 
+//                 if(nextSection.length)  { 
+//                     moveSection(nextSection.index());
+//                 }  else {
+//                     moveSection(section.first().index());
+//                 } 
                 
-            }
+//             }
        
       
        
-        });
+//         });
 
-
-    // }
 
        
-});
+// });
 
 
 
@@ -337,7 +335,7 @@ $(function () {
 
 
 
-// /// wheel
+// /// wheel min
 
 // $(function () {
 
@@ -370,3 +368,91 @@ $(function () {
     
     
 //     });
+
+
+
+/// wheel mouse
+
+$(function () {
+   
+        var generatePoints = function () {
+        $('section').each(function() {
+        var point = $('<li>', {
+        attr : { 
+        class : 'points__li'
+        },
+        html: '<a href="#"></a>'
+        })
+        $('.points__ul').append(point);
+        })
+        };
+        generatePoints();
+
+
+
+
+        var moveSection = function (slideNum){
+         var
+        
+        
+            
+            section = $('section'),
+            activeSection = section.filter('.active'),
+            reqSection = section.eq(slideNum), 
+            reqIndex = reqSection.index(),
+            list = $('#wheel'),
+            duration = 800;
+
+           
+
+            
+        if (reqSection.length) {
+                list.animate({  
+                    'top' : -reqIndex * 100 + 'vh'
+                    }, duration, function( ) {
+                    activeSection.removeClass('active');
+                    reqSection.addClass('active');
+                });
+            }
+        }
+ 
+
+        $('.pointzero').on('click', function(e){
+            e.preventDefault();
+            
+            var $this = $(this),
+            // point = $('.pointzero'),
+            section = $('section'),
+            activeSection = section.filter('.active'),
+            nextSection = activeSection.next(),
+            prevSection = activeSection.prev(),
+            existedSection,
+            edgeSection,
+            reqSection;
+            
+            // moveSection(nextSection.index());
+            
+            if ($this.hasClass('header-wheel__down')) { 
+               existedSection = activeSection.prev();
+               edgeSection = section.last();
+            }
+
+            if ($this.hasClass('header-wheel__up')) { 
+                existedSection = activeSection.next();
+                edgeSection = section.first();
+            }
+
+
+            reqItem = 
+
+            if (existedSection.length){
+            moveSection(existedSection.index());
+            } else {
+             moveSection(edgeSection.index());
+            }
+       
+        });
+
+
+       
+});
