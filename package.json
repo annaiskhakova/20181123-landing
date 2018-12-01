@@ -1,0 +1,26 @@
+{
+  "name": "20181123-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annaiskhakova/20181123-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annaiskhakova/20181123-landing/issues"
+  },
+  "homepage": "https://github.com/annaiskhakova/20181123-landing#readme",
+  "dependencies": {
+    "stylelint": "^9.9.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
