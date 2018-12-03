@@ -1,36 +1,28 @@
-//colors
-$orange: #e45028;
-$yellow: #f9b43b;
-$black: #2f3234;
-$red: #e35028;
-
-
-//breakpoints
-
-$tablets:768px;
-$phones:480px;
-
 
 @import "./normalize.css";
 @import "../fonts/fonts.css";
-@import "./media";
-@import "./layout";
+@import "./config/mixins";
+@import "./config/media";
+@import "./layout/layout";
 
 
 //slick
 @import "../js/slick/slick.css";
 @import "../js/slick/slick-theme.css";
 
+//scroll
+@import "../js/scroll/fullpage.css";
+
 //sections
-@import "./header";
-@import "./we";
-@import "./team";
-@import "./menu";
-@import "./reviews";
-@import "./slider";
-@import "./form";
-@import "./contacts";
-@import "./wheel";
+@import "./sections/header";
+@import "./sections/we";
+@import "./sections/team";
+@import "./sections/menu";
+@import "./sections/reviews";
+@import "./sections/slider";
+@import "./sections/form";
+@import "./sections/contacts";
+@import "./sections/wheel";
 
 
 

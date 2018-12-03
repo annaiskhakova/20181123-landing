@@ -3,6 +3,7 @@
 @import url(../fonts/fonts.css);
 @import url(../js/slick/slick.css);
 @import url(../js/slick/slick-theme.css);
+@import url(../js/scroll/fullpage.css);
 body {
   margin: 0 auto;
   font-family: 'Ubuntu', sans-serif;
@@ -71,6 +72,12 @@ h2 {
 .container {
   margin: 0 auto;
   width: 60rem; }
+  @media (max-width: 768px) {
+    .container {
+      width: 96%; } }
+  @media (max-width: 480px) {
+    .container {
+      width: 100%; } }
 
 .btn {
   display: flex;
@@ -186,6 +193,9 @@ button {
   height: 5.625rem;
   margin: 0 auto;
   width: 60rem; }
+  @media (max-width: 768px) {
+    .header-menu__content {
+      width: 96%; } }
   @media (max-width: 480px) {
     .header-menu__content {
       width: 100%; } }
@@ -339,7 +349,8 @@ button {
   @media (max-width: 768px) {
     .header-container__block {
       flex-direction: column;
-      margin: 0; } }
+      margin: 0;
+      width: 96%; } }
 
 .header-container__item {
   max-width: 50%;
@@ -347,12 +358,26 @@ button {
   @media (max-width: 768px) {
     .header-container__item {
       max-width: 100%;
-      margin: 5px 60px;
       text-align: center; }
       .header-container__item h1 {
-        margin: 0; }
+        margin: 0;
+        margin: 5px 60px;
+        font-size: 3.75rem; }
       .header-container__item h2 {
-        margin-top: 20px; } }
+        margin-top: 20px;
+        margin: 5px 60px;
+        font-size: 2.5rem; } }
+  @media (max-width: 480px) {
+    .header-container__item {
+      margin: 5px; }
+      .header-container__item h1 {
+        margin: 0;
+        margin: 5px 60px;
+        font-size: 3rem; }
+      .header-container__item h2 {
+        margin-top: 20px;
+        margin: 5px 60px;
+        font-size: 2.25rem; } }
 
 .container__img {
   width: 28.4375rem;
@@ -360,12 +385,13 @@ button {
   margin: -2.6875rem 0.625rem 0 0.9375rem; }
   @media (max-width: 768px) {
     .container__img {
-      margin-top: -4.6875rem; } }
+      margin-top: -4.6875rem;
+      max-width: 25rem; } }
   @media (max-width: 768px) and (max-width: 480px) {
     .container__img {
       margin: 20px 0;
       padding: 0;
-      width: 100%; } }
+      max-width: 90%; } }
 
 .we {
   background-color: #ffffff;
@@ -837,7 +863,11 @@ transform: rotate(-90deg);*/
   margin-left: -0.5rem; }
   @media (max-width: 768px) {
     .slider__h1 {
-      text-align: center; } }
+      text-align: center;
+      font-size: 3.4375rem; } }
+  @media (max-width: 480px) {
+    .slider__h1 {
+      font-size: 3rem; } }
 
 .slider__container {
   display: flex;
@@ -845,6 +875,12 @@ transform: rotate(-90deg);*/
   flex-flow: row;
   justify-content: center;
   width: 60rem; }
+  @media (max-width: 768px) {
+    .slider__container {
+      width: 96%; } }
+  @media (max-width: 480px) {
+    .slider__container {
+      width: 100%; } }
 
 .slider__content {
   display: flex;
@@ -867,7 +903,10 @@ transform: rotate(-90deg);*/
   align-items: center; }
   @media (max-width: 768px) {
     .slider__items {
-      width: 34.8125rem; } }
+      width: 30.625rem; } }
+  @media (max-width: 768px) {
+    .slider__items {
+      width: 24.375rem; } }
 
 .slider__item {
   display: flex;
@@ -911,7 +950,8 @@ transform: rotate(-90deg);*/
   align-self: center; }
   @media (max-width: 768px) {
     .slider-img__hero {
-      max-height: 250px; } }
+      max-height: 250px;
+      width: 86%; } }
 
 .slider-img__hero-chicken {
   background-image: url(./../img/chicken-burger.png); }
@@ -1024,7 +1064,9 @@ transform: rotate(-90deg);*/
   margin: -45px 15px 15px 15px; }
   @media (max-width: 768px) {
     .slider-item__text {
-      width: 100%; } }
+      width: 100%;
+      font-size: 0.775rem;
+      line-height: 1.3; } }
   @media (max-width: 480px) {
     .slider-item__text {
       max-width: 300px; } }
@@ -1048,6 +1090,11 @@ transform: rotate(-90deg);*/
   line-height: 0.9; }
   .slider-text__price span {
     font-size: 4.5rem; }
+  @media (max-width: 768px) {
+    .slider-text__price {
+      font-size: 1.2rem; }
+      .slider-text__price span {
+        font-size: 2.5rem; } }
 
 .slick-prev,
 .slick-prev:before {
@@ -1100,8 +1147,7 @@ transform: rotate(-90deg);*/
   justify-content: center; }
   @media (max-width: 768px) {
     .form {
-      justify-content: flex-start;
-      padding-top: 13%; } }
+      justify-content: flex-start; } }
 
 .form__container {
   margin: 0 auto;

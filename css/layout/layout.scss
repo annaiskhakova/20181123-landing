@@ -74,7 +74,14 @@ text-align: right;
     
 .container {
 margin: 0 auto;
-width: 60rem; }
+width: 60rem; 
+@include tablets {
+      
+    width: 96%; 
+    }
+    @include phones {
+        width: 100%; 
+        }}
 
 
 .btn{
