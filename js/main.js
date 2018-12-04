@@ -305,6 +305,9 @@ function validateForm(form) {
 
 
 
+
+
+
 const Review = document.querySelector(".reviews");
 const revButton = document.querySelectorAll(".reviews__btn");
 const revBlock = document.querySelector(".reviews__block");
@@ -329,8 +332,12 @@ e.preventDefault();
 }
 
 
-/// wheel mouse
+/// навигация
 $(function() {
+
+
+
+
 
     var colorPoints = function (index) {
         $('#doc')
@@ -416,4 +423,85 @@ $(function() {
 
     })
 
+
+    $('body').on('mousewheel DOMMouseScroll', function(e){  
+        e.preventDefault();
+        var $this = $(this),
+        index = $this.index();
+  
+        if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
+          if(e.originalEvent.detail > 0) {
+                      // $this.hasClass('header-wheel__down'),
+            console.log('Down');
+            console.log(edgeSection);
+            console.log(existedSection);
+          } else if(e.originalEvent.detail < 0){
+                     // $this.hasClass('header-wheel__up'),
+            //   console.log('Up');
+            //   console.log(edgeSection);
+            //   console.log(existedSection);
+          }
+        } else if (typeof e.originalEvent.wheelDelta == 'number') {
+          if(e.originalEvent.wheelDelta < 0) {
+            // $this.hasClass('header-wheel__down'),
+            console.log('Down1');
+            moveSection(reqSection);
+          } else if(e.originalEvent.wheelDelta > 0) {
+            // $this.hasClass('header-wheel__up'),
+              moveSection(index);
+              }
+        }
+      });
+ 
+    // const mainNav = element.querySelectorAll (".nav__li");
+    // console.log(mainNav);
+    // for (let i = 0; i < rmainNav.length; i++ ) {
+    //     const navi = mainNav[i];
+    //     navi.addEventListener("click", function(e) {
+    //         e.preventDefault();
+
+    $('body').on('click', '.nav__li01', function(i) {
+        i.preventDefault();
+         moveSection(1);
+    })
+    $('body').on('click', '.nav__li02', function(i) {
+        i.preventDefault();
+         moveSection(2);
+    })
+
+    $('body').on('click', '.nav__li03', function(i) {
+        i.preventDefault();
+         moveSection(3);
+    })
+         
+    $('body').on('click', '.nav__li04', function(i) {
+        i.preventDefault();
+         moveSection(4);
+    })
+    $('body').on('click', '.nav__li05', function(i) {
+        i.preventDefault();
+         moveSection(5);
+    })
+    $('body').on('click', '.nav__li06', function(i) {
+        i.preventDefault();
+         moveSection(6);
+    })
+
+    $('body').on('click', '.nav__li07', function(i) {
+        i.preventDefault();
+         moveSection(7);
+    })
+         
+    $('body').on('click', '.nav__li08', function(i) {
+        i.preventDefault();
+         moveSection(8);
+    })
+         
+    //     });
+
+    // }
+
 });
+
+
+
