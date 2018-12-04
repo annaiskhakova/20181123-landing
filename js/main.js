@@ -427,38 +427,40 @@ $(function() {
     $('body').on('mousewheel DOMMouseScroll', function(e){  
         e.preventDefault();
         var $this = $(this),
-        index = $this.index();
+        // index = $this.index();
+        section = $('section'),
+        activeSection = section.filter('.active'),
+        existedSection = activeSection.next(),
+        existedSection,
+        // edgeSection,
+        reqSection;
   
         if(typeof e.originalEvent.detail == 'number' && e.originalEvent.detail !== 0) {
           if(e.originalEvent.detail > 0) {
-                      // $this.hasClass('header-wheel__down'),
-            console.log('Down');
-            console.log(edgeSection);
-            console.log(existedSection);
+            existedSection = activeSection.prev();
+            edgeSection = section.last();
           } else if(e.originalEvent.detail < 0){
-                     // $this.hasClass('header-wheel__up'),
-            //   console.log('Up');
-            //   console.log(edgeSection);
-            //   console.log(existedSection);
+            existedSection = activeSection.next();
+            edgeSection = section.first();
           }
         } else if (typeof e.originalEvent.wheelDelta == 'number') {
           if(e.originalEvent.wheelDelta < 0) {
-            // $this.hasClass('header-wheel__down'),
-            console.log('Down1');
-            moveSection(reqSection);
+            existedSection = activeSection.prev();
+            edgeSection = section.last();
+           
+            // moveSection(index);
           } else if(e.originalEvent.wheelDelta > 0) {
-            // $this.hasClass('header-wheel__up'),
-              moveSection(index);
+         
+            existedSection = activeSection.next();
+            edgeSection = section.first();
+               
               }
+              reqSection = existedSection.length ? existedSection.index() : edgeSection.index()
+              moveSection(reqSection);
         }
       });
  
-    // const mainNav = element.querySelectorAll (".nav__li");
-    // console.log(mainNav);
-    // for (let i = 0; i < rmainNav.length; i++ ) {
-    //     const navi = mainNav[i];
-    //     navi.addEventListener("click", function(e) {
-    //         e.preventDefault();
+
 
     $('body').on('click', '.nav__li01', function(i) {
         i.preventDefault();
